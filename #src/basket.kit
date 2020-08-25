@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Корзина</title>
+	<link rel="stylesheet" href="css/main-min.css" />
+	<link href="img/icons/favicon.png" rel="icon" type="image/png" />
+</head>
+
+<body class="basket-page">
+	<div class="wrapper">
+		<div class="content">
+
+			<!-- @import '_header.html' -->
+
+			<div class="main">
+				<div class="main-body">
+					<div class="container">
+						<div class="main-body__inner">
+
+
+							<aside class="main-body__aside">
+								<!-- @import '_catalog.html' -->
+
+								<!-- @import '_aside-footer.html' -->
+							</aside>
+
+
+							<div class="main-body__content">
+
+								<!-- @import '_search-form.html' -->
+
+								<div class="breadcrumbs catalog-page-breadcrumbs">
+									<nav class="breadcrumbs__nav">
+										<ul class="breadcrumbs__list">
+											<li class="breadcrumbs__li">
+												<a href="index.html" class="breadcrumbs__link">Главная</a>
+											</li>
+											<li class="breadcrumbs__li">
+												<a class="breadcrumbs__link link-current">Корзина</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+
+								<!-- ---------------
+								* ==================  main content  ================== *
+								---------------- -->
+								<main class="basket-page__content">
+									<h2 class="basket__title title">Оформление заказа</h2>
+									<div class="basket-page__body">
+										<div class="basket__tabs tabs">
+											<h3 class="fast-order-tab basket__tab tab">Быстрый заказ</h3>
+											<h3 class="region-tab basket__tab tab active">Доставка в регионы</h3>
+										</div>
+
+										<!-- * -------------  fast-order  ------------- * -->
+										<form action="" id="fast-order-form" class="fast-order tab-body">
+											<div class="fast-order__body order__body">
+												<div class="fast-order__item order__item">
+													<div class="item__name required">Имя:</div>
+													<input type="text" class="item__input" required>
+												</div>
+												<div class="fast-order__item order__item">
+													<div class="item__name required">Моб. телефон:</div>
+													<input type="tel" class="item__input" required>
+												</div>
+												<div class="fast-order__item order__item">
+													<div class="item__name required">Ваш E-mail:</div>
+													<input type="email" class="item__input" required>
+												</div>
+											</div>
+
+											<div class="fast-order__text order__text">
+												<p class="text__p text-required">Поля, обязательные для заполнения</p>
+												<p class="text__p">Отправка товара производится только после 100% оплаты
+													товара. Стоимость доставки возможно оплатить при
+													получении заказа.
+												</p>
+												<p class="text__p">
+													* Интернет-магазин не несет ответственности за задержку
+													доставки заказа, связанную с работой курьерских служб DPD
+													и EMS Почты России.
+												</p>
+											</div>
+										</form>
+
+										<!-- * ------------- region-delivery  ------------- * -->
+										<form action="" id="region-delivery-form" class="region-delivery tab-body active">
+											<div class="region-delivery__body order__body">
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Фамилия:</div>
+													<input type="text" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Имя:</div>
+													<input type="text" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Отчество:</div>
+													<input type="text" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Моб. телефон:</div>
+													<input type="tel" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Ваш E-mail:</div>
+													<input type="email" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name">Способ оплаты:</div>
+													<div class="select-wrapper basket-select-wrapper">
+														<select name="payment" class="payment__select select">
+															<option value="sberbank" class="sort__option">Через Сбербанк</option>
+															<option value="qiwi" class="sort__option">Через Qiwi</option>
+														</select>
+													</div>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Индекс</div>
+													<input type="number" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Город</div>
+													<input type="text" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name required">Адрес доставки:</div>
+													<input type="text" class="item__input" required>
+												</div>
+												<div class="region-delivery__item order__item">
+													<div class="item__name item-textarea-name">Комментарии:</div>
+													<textarea name="basket-comment" class="item__textarea item__input"></textarea>
+												</div>
+												<div class="region-delivery__item order__item news-subscription">
+													<input type="checkbox" class="news-subscription__checkbox" id="news-subscription">
+													<label for="news-subscription" class="news-subscription__label">Подписаться на новости и
+														скидки</label>
+												</div>
+											</div>
+
+											<div class="region-delivery__text order__text">
+												<p class="text__p text-required">Поля, обязательные для заполнения</p>
+												<p class="text__p">Отправка товара производится только после 100% оплаты
+													товара. Стоимость доставки возможно оплатить при
+													получении заказа.
+												</p>
+												<p class="text__p">Доставка в регионы осуществляется EMS Почтой России
+													(в течение 5-14 дней) и курьерской службой DPD (в течение
+													3-5 дней) с момента передачи заказа в службу доставки.
+													Стоимость зависит от веса заказа и расстояния. В некоторые
+													регионы доставка возможна только посредством EMS Почты
+													России, способ доставки уточняйте у оператора при оформлении заказа*.
+												</p>
+												<p class="text__p">
+													* Интернет-магазин не несет ответственности за задержку
+													доставки заказа, связанную с работой курьерских служб DPD
+													и EMS Почты России.
+												</p>
+											</div>
+										</form>
+									</div>
+
+
+									<!-- ---------------
+									* ==================  order-items  ================== *
+									---------------- -->
+									<div class="order-items">
+										<h2 class="order-items__title title">ваш заказ</h2>
+										<div class="order-item">
+											<div class="item__header">
+												<div class="item__img">
+													<img src="img/order-item-img.png" alt="">
+												</div>
+												<div class="item__text">
+													<h3 class="item__title"><span class="title__bold">BH Fitness F1 G6414V</span> Беговая дорожка
+													</h3>
+													<div class="item__price"><span class="item-price-number">47 240</span> <span class="price__currency">&#8381;</span></div>
+												</div>
+											</div>
+											<div class="item__footer">
+												<div class="item__amount side__amount">
+													<div class="amount__minus amount-change disabled">
+														<img src="img/icons/pages-arrow.svg" alt="">
+													</div>
+													<input type="number" class="amount__input" min="1" value="1">
+													<div class="amount__plus amount-change">
+														<img src="img/icons/pages-arrow.svg" alt="">
+													</div>
+												</div>
+												<div class="item__total-price">
+													<div class="total-price__text">Всего:</div>
+													<div class="total-price__price">
+														<span class="total-price-number main-price-number"></span><span
+															class="price__currency"> &#8381;</span>
+													</div>
+												</div>
+											</div>
+											<div class="item__remove"></div>
+										</div>
+										<div class="order-item">
+											<div class="item__header">
+												<div class="item__img">
+													<img src="img/order-item-img.png" alt="">
+												</div>
+												<div class="item__text">
+													<h3 class="item__title"><span class="title__bold">BH Fitness F1 G6414V</span> Беговая дорожка
+													</h3>
+													<div class="item__price"><span class="item-price-number">64 990</span> <span class="price__currency">&#8381;</span></div>
+												</div>
+											</div>
+											<div class="item__footer">
+												<div class="item__amount side__amount">
+													<div class="amount__minus amount-change disabled">
+														<img src="img/icons/pages-arrow.svg" alt="">
+													</div>
+													<input type="number" class="amount__input" min="1" value="1">
+													<div class="amount__plus amount-change">
+														<img src="img/icons/pages-arrow.svg" alt="">
+													</div>
+												</div>
+												<div class="item__total-price">
+													<div class="total-price__text">Всего:</div>
+													<div class="total-price__price">
+														<span class="total-price-number main-price-number"></span><span
+															class="price__currency"> &#8381;</span>
+													</div>
+												</div>
+											</div>
+											<div class="item__remove"></div>
+										</div>
+
+										<div class="order-total-price">
+											<h3 class="order-total-price__title">Итого:
+												<span class="order-total-price__number"></span>
+												<span class="order-total-price__currency">&#8381;</span>
+											</h3>
+											<button class="order__checkout" form="fast-order-form">Оформить заказ</button>
+											<button class="order__checkout active" form="region-delivery-form">Оформить заказ</button>
+										</div>
+									</div>
+								</main>
+								
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+				<!-- @import '_info-and-help.html' -->
+
+			</div>
+		</div>
+
+		<!-- @import '_footer.html' -->
+
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/dynamic-adapt-min.js"></script>
+	<script src="js/main-min.js"></script>
+</body>
+
+</html>
